@@ -1,0 +1,412 @@
+```css
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f8f3;
+    color: #333;
+    line-height: 1.7;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.nav {
+    width: 100%;
+    min-height: 80px;
+    background: #14532d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 6%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #bbf7d0;
+}
+
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 27px;
+    height: 3px;
+    background: white;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+/* DROPDOWN */
+.nav-dropdown {
+    display: none;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 45px auto;
+    padding: 35px;
+    display: flex;
+    align-items: flex-start;
+    gap: 35px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   GAMBAR KIRI
+========================= */
+.gambar {
+    flex: 1;
+    position: sticky;
+    top: 110px;
+}
+
+.gambar img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.gambar img:hover {
+    transform: scale(1.02);
+}
+
+/* =========================
+   JAWABAN KANAN
+========================= */
+.jawaban {
+    flex: 1.5;
+    min-width: 0;
+    background: #f7fbf7;
+    padding: 28px;
+    border-radius: 12px;
+    border-left: 5px solid #229954;
+}
+
+/* JUDUL UTAMA */
+.jawaban h2 {
+    color: #14532d;
+    font-size: 27px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* SUBJUDUL */
+.jawaban h3 {
+    color: #166534;
+    font-size: 19px;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    padding-bottom: 7px;
+    border-bottom: 2px solid #d5ead9;
+}
+
+/* PARAGRAF */
+.jawaban p {
+    color: #444;
+    font-size: 15px;
+    text-align: justify;
+    margin-bottom: 12px;
+}
+
+/* TEKS TEBAL */
+.jawaban b {
+    color: #14532d;
+}
+
+/* LIST */
+.jawaban ul {
+    padding-left: 25px;
+    margin: 12px 0 20px;
+}
+
+.jawaban li {
+    color: #444;
+    font-size: 15px;
+    padding: 5px 0;
+}
+
+.jawaban li::marker {
+    color: #229954;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer-bottom {
+    width: 100%;
+    background: #14532d;
+    padding: 20px;
+    margin-top: 35px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #e5f5e9;
+    font-size: 14px;
+    margin: 0;
+    text-align: center;
+}
+
+.footer-bottom strong {
+    color: white;
+}
+
+/* =========================
+   LIGHTBOX
+========================= */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 20px;
+}
+
+.lightbox[hidden] {
+    display: none;
+}
+
+.lightbox-dialog {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.lightbox-image {
+    max-width: 100%;
+    max-height: 85vh;
+    border-radius: 12px;
+    object-fit: contain;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 900px) {
+    .nav {
+        padding: 12px 4%;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 22px;
+        gap: 20px;
+    }
+
+    .jawaban {
+        padding: 20px;
+    }
+
+    .jawaban h2 {
+        font-size: 23px;
+    }
+}
+
+/* =========================
+   HANDPHONE
+========================= */
+@media (max-width: 700px) {
+
+    .nav {
+        min-height: 70px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-dropdown {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 220px;
+        background: #14532d;
+        flex-direction: column;
+        padding: 15px;
+        gap: 12px;
+        border-radius: 0 0 0 12px;
+    }
+
+    .nav-dropdown.show {
+        display: flex;
+    }
+
+    .nav-dropdown a {
+        color: white;
+        text-decoration: none;
+        padding: 8px;
+        display: block;
+    }
+
+    .nav-dropdown a:hover {
+        background: #228b45;
+        border-radius: 5px;
+    }
+
+    .logo span {
+        font-size: 13px;
+    }
+
+    .logo-img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .container {
+        width: 94%;
+        margin: 25px auto;
+        padding: 18px;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .gambar {
+        position: static;
+        width: 100%;
+    }
+
+    .gambar img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    .jawaban {
+        width: 100%;
+        padding: 18px;
+    }
+
+    .jawaban h2 {
+        font-size: 22px;
+    }
+
+    .jawaban h3 {
+        font-size: 18px;
+    }
+
+    .jawaban p,
+    .jawaban li {
+        font-size: 14px;
+    }
+
+    .footer-bottom {
+        padding: 15px;
+    }
+
+    .footer-bottom p {
+        font-size: 12px;
+    }
+}
+
+/* =========================
+   HP KECIL
+========================= */
+@media (max-width: 400px) {
+    .jawaban {
+        padding: 14px;
+    }
+
+    .jawaban h2 {
+        font-size: 19px;
+    }
+
+    .jawaban h3 {
+        font-size: 16px;
+    }
+
+    .jawaban p,
+    .jawaban li {
+        font-size: 13px;
+    }
+}
+```
